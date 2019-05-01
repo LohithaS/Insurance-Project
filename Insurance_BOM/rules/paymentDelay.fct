@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.rule:Function xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore">
+  <name>paymentDelay</name>
+  <uuid>b0b3bc9c-5af0-44d6-a038-6a769e839a0d</uuid>
+  <returnType>java.lang.Double</returnType>
+  <definition><![CDATA[if(paymentBehaviour.equalsIgnoreCase("good"))
+{
+	
+		policy_claim=policy_claim-0;
+	
+}
+if(paymentBehaviour.equalsIgnoreCase("worst"))
+{
+	if(status.equalsIgnoreCase("high"))
+	{
+		policy_claim=85*(policy_claim/100);
+	}else if(status.equalsIgnoreCase("medium"))
+	{
+		policy_claim=75*(policy_claim/100);
+	}else
+	policy_claim=68*(policy_claim/100);
+}
+return policy_claim;]]></definition>
+  <imports>use status;</imports>
+  <imports>use paymentBehaviour;</imports>
+  <imports>use policy_claim;</imports>
+</ilog.rules.studio.model.rule:Function>

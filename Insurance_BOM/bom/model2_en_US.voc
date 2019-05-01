@@ -1,0 +1,26 @@
+# Vocabulary Properties
+uuid = 82088530-f8f1-4999-9526-529473d9f18c
+
+# com.Insurance.Insurance
+com.Insurance.Insurance#concept.label = insurance
+com.Insurance.Insurance.name#phrase.action = set the name of {this} to {name}
+com.Insurance.Insurance.name#phrase.navigation = {name} of {this}
+com.Insurance.Insurance.primaryDetails()#phrase.navigation = {this}.primaryDetails()
+com.Insurance.Insurance.type#phrase.action = set the type of {this} to {type}
+com.Insurance.Insurance.type#phrase.navigation = {type} of {this}
+
+# com.Insurance.InsuranceProcess
+com.Insurance.InsuranceProcess#concept.label = insurance process
+com.Insurance.InsuranceProcess.age#phrase.action = set the age of {this} to {age}
+com.Insurance.InsuranceProcess.age#phrase.navigation = {age} of {this}
+com.Insurance.InsuranceProcess.age(double,java.lang.String,double)#phrase.navigation = {this}.age({0}, {1}, {2})
+com.Insurance.InsuranceProcess.checkEligibility()#phrase.navigation = {this}.checkEligibility()
+com.Insurance.InsuranceProcess.checkProcess(java.util.List,double)#phrase.navigation = {this}.checkProcess({0}, {1})
+com.Insurance.InsuranceProcess.name#phrase.action = set the name of {this} to {name}
+com.Insurance.InsuranceProcess.name#phrase.navigation = {name} of {this}
+com.Insurance.InsuranceProcess.paidMonths#phrase.action = set the paid months of {this} to {paid months}
+com.Insurance.InsuranceProcess.paidMonths#phrase.navigation = {paid months} of {this}
+com.Insurance.InsuranceProcess.priority#phrase.action = set the priority of {this} to {priority}
+com.Insurance.InsuranceProcess.priority#phrase.navigation = {priority} of {this}
+com.Insurance.InsuranceProcess.type#phrase.action = set the types of {this} to {type}
+com.Insurance.InsuranceProcess.type#phrase.navigation = {type} of {this}

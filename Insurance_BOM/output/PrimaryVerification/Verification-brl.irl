@@ -1,0 +1,19 @@
+package PrimaryVerification {
+   use insurance;
+   use agentContact;
+   rule Verification {
+      property ilog.rules.business_name = "Verification";
+      property ilog.rules.package_name = "PrimaryVerification";
+      property status = "new";
+      when {
+         com.Insurance.Insurance() from insurance;
+         evaluate ((insurance.primaryDetails().indexOf("null") == -1
+         	&& agentContact.indexOf("true") != -1));
+      } then {
+         insurance.type = "yes";
+      } else {
+         insurance.type = "no";
+      }
+   }
+}
+

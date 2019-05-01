@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>MainRule</name>
+  <uuid>af99e50a-3c73-48b9-a21f-3f35397ba1f6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'statusOfPolicy' to 'Insurance Process' .checkEligibility ( ) ;
+if
+    'statusOfPolicy' does not contain "Sorry Not Applicable"
+     
+then
+    set status to statusOfPolicy ;
+    set 'evaluation of damage' to "true";
+else
+    set status to statusOfPolicy ;
+    set 'evaluation of damage' to "false";]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,12 @@
+variables {
+  com.Insurance.Insurance insurance;
+  java.lang.String agentContact;
+  java.lang.String investigation;
+  java.lang.String recheck;
+  java.lang.String damage;
+  java.lang.String status;
+  com.Insurance.InsuranceProcess insuranceProcess;
+  java.lang.Double policy_claim;
+  java.lang.String paymentBehaviour;
+  java.lang.String managerApproval;
+}

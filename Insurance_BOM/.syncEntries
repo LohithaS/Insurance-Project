@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><teamservers>
+<teamserver>
+<target dataSource="" login="admin" url="http://localhost:9080/teamserver"/>
+<entry baseType="B2XMapping" checksum="3474191781" projectName="InsuranceProject" qualifiedName="model2" sourceCS="4D9F20B7FD3C7DF868EC947BFCA6AB5C" targetCS="3474191781" type="B2XMapping" uuid="4c3b2985-dbf8-46b9-8da1-d7b74c8fcdb9"/>
+<entry baseType="BRLRule" checksum="2898791868" projectName="InsuranceProject" qualifiedName="MainRule" sourceCS="38DD42682176D7AECA31D4D1530A926E" targetCS="2898791868" type="BRLRule" uuid="af99e50a-3c73-48b9-a21f-3f35397ba1f6"/>
+<entry baseType="BRLRule" checksum="3877834679" projectName="InsuranceProject" qualifiedName="PrimaryVerification.Verification" sourceCS="5B995436462B195371DE736E4A6F4101" targetCS="3877834679" type="BRLRule" uuid="f2eb670e-0663-46b9-aa82-612dadbe998c"/>
+<entry baseType="BusinessObjectModel" checksum="3474191781" projectName="InsuranceProject" qualifiedName="model2" sourceCS="04A982FD7DD896FAE58388744E29F962" targetCS="3474191781" type="BusinessObjectModel" uuid="f78b1943-410b-40e6-baf2-972d57019a55"/>
+<entry baseType="DecisionOperation" checksum="4108601888" projectName="InsuranceProject" qualifiedName="InsuranceOperation" sourceCS="9B09B03AAB4671C6185AAE5C76BCFE70" targetCS="4108601888" type="DecisionOperation" uuid="d6fbe33c-a9e6-4897-ac1e-3a5d3c2d0f50"/>
+<entry baseType="DecisionTable" checksum="25957223" projectName="InsuranceProject" qualifiedName="AmountClaimTable" sourceCS="FA9BB3087567214072400418D4A45E68" targetCS="25957223" type="DecisionTable" uuid="37264abf-44b8-47b4-98e8-18d42da0fd8f"/>
+<entry baseType="DecisionTable" checksum="3397716026" projectName="InsuranceProject" qualifiedName="PrimaryVerification.PolicyVerification" sourceCS="834FA5EFE712717EA25B71F8364AF223" targetCS="3397716026" type="DecisionTable" uuid="69286957-9555-4873-b37c-9d50cb70488c"/>
+<entry baseType="DeploymentConfiguration" checksum="3935710857" projectName="InsuranceProject" qualifiedName="InsuranceProject" sourceCS="66522DE599236FDD6772FF50F8C30B7B" targetCS="3935710857" type="DeploymentConfiguration" uuid="76aada09-6001-4594-88f0-d7a34f420b93"/>
+<entry baseType="Resource" checksum="2977781481" projectName="InsuranceProject" qualifiedName="META-INF/deployment.xml" sourceCS="23B65A404268EA96BC6927FC125AC6AE" targetCS="2977781481" type="Resource" uuid="META-INF/deployment.xml"/>
+<entry baseType="Ruleflow" checksum="3840539734" projectName="InsuranceProject" qualifiedName="InsuranceFlow" sourceCS="29EDB39973606BB84FA1886995637CCF" targetCS="3840539734" type="Ruleflow" uuid="fffd1bf7-67a6-4361-978f-71f35871874a"/>
+<entry baseType="RulePackageInfo" checksum="1682615315" projectName="InsuranceProject" qualifiedName="PrimaryVerification" sourceCS="9E54F1D5357729151B9D57F1939BF148" targetCS="1682615315" type="RulePackageInfo" uuid="6a988f59-3df7-4cb8-a3eb-499fab96811d"/>
+<entry baseType="RuleProjectInfo" checksum="1051377230" projectName="InsuranceProject" qualifiedName="InsuranceProject" sourceCS="09E9D150AFB7F9E876146900495E3CA0" targetCS="1051377230" type="RuleProjectInfo" uuid="bd7e1728-97f8-4398-915a-2fe81d5b5e4a"/>
+<entry baseType="VariableSet" checksum="2361826494" projectName="InsuranceProject" qualifiedName="InsuranceVariables" sourceCS="883A88EC4E688FF5B76555DA75F122CE" targetCS="2361826494" type="VariableSet" uuid="81b0c215-12a0-4bc1-94df-4ffa1f131204"/>
+<entry baseType="Vocabulary" checksum="3474191781" projectName="InsuranceProject" qualifiedName="model2_en_US" sourceCS="DDDA73A4205D44F5E204B25D7C954B27" targetCS="3474191781" type="Vocabulary" uuid="82088530-f8f1-4999-9526-529473d9f18c"/>
+</teamserver>
+</teamservers>

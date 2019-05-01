@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Verification</name>
+  <uuid>f2eb670e-0663-46b9-aa82-612dadbe998c</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    insurance .primaryDetails ( ) does not contain "null"
+    and 'contact with agent' contains "true"
+    
+
+then set the type of insurance to "yes";  
+
+else set the type of insurance to "no"; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

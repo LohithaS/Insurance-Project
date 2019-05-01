@@ -1,0 +1,35 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/InsuranceProject//InsuranceXOM"
+property uuid "f78b1943-410b-40e6-baf2-972d57019a55"
+package com.Insurance;
+
+
+public class Insurance
+{
+    public string name;
+    public string type;
+    public Insurance(string arg1, string arg2);
+    public Insurance();
+    public string primaryDetails();
+}
+
+public class InsuranceProcess
+{
+    public double age;
+    public string name;
+    public double paidMonths;
+    public string priority;
+    public java.util.List type domain 0,* class string;
+    public InsuranceProcess(string arg1, 
+        java.util.List arg2 domain 0,* class string, 
+        string arg3, 
+        double arg4, 
+        double arg5);
+    public InsuranceProcess();
+    public string age(double arg1, string arg2, double arg3);
+    public string checkEligibility();
+    public string checkProcess(java.util.List arg1 domain 0,* class string, 
+        double arg2);
+}
+

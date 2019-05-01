@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>InsuranceFlow</name>
+  <uuid>8356e4db-3571-4c00-a3b9-3814cfa62989</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="MainRule" Ordering="Default">
+        <RuleList>
+          <Rule Uuid="af99e50a-3c73-48b9-a21f-3f35397ba1f6"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="AmountClaimTable" Ordering="Default">
+        <FinalActions Language="irl"><![CDATA[policy_claim=paymentDelay();]]></FinalActions>
+        <RuleList>
+          <Rule Uuid="37264abf-44b8-47b4-98e8-18d42da0fd8f"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1">
+        <Actions Language="bal"><![CDATA[set managerApproval to "mandatory";]]></Actions>
+      </StopTask>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_4" Task="MainRule"/>
+      <TaskNode Identifier="node_5" Task="AmountClaimTable"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_8" Source="node_0" Target="node_4"/>
+      <Transition Identifier="transition_9" Source="node_4" Target="node_5">
+        <Conditions Language="bal"><![CDATA['evaluation of damage' contains  "true" ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_10" Source="node_5" Target="node_1">
+        <Conditions Language="bal"><![CDATA[policy_claim is more than 50000  ]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_11" Source="node_4" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_5#height">40.0</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#x">51.0</Data>
+      <Data Name="node_5#name">node_5</Data>
+      <Data Name="node_4#y">91.0</Data>
+      <Data Name="node_4#name">node_4</Data>
+      <Data Name="node_5#width">144.05664</Data>
+      <Data Name="transition_10#label">amount&gt;50000</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_0#x">51.0</Data>
+      <Data Name="node_4#height">40.0</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_1#x">59.254707</Data>
+      <Data Name="node_1#width">15.000012</Data>
+      <Data Name="node_1#y">268.5</Data>
+      <Data Name="node_1#height">15.00003</Data>
+      <Data Name="transition_9#label">yes</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_5#y">181.0</Data>
+      <Data Name="node_5#x">98.51416</Data>
+      <Data Name="node_0#name">node_0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

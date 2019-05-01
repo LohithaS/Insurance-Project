@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="InsuranceOperation" usingRuleflow="true" ruleflowName="InsuranceFlow" usingExtractor="true" targetRuleProjectName="InsuranceProject">
+  <name>InsuranceOperation</name>
+  <uuid>d6fbe33c-a9e6-4897-ac1e-3a5d3c2d0f50</uuid>
+  <referencedVariables variableName="status" variableSetName="status" direction="OUT">
+    <variableSet href="../rules/InsuranceVariables.var#81b0c215-12a0-4bc1-94df-4ffa1f131204"/>
+  </referencedVariables>
+  <referencedVariables variableName="policy_claim" variableSetName="policy_claim" direction="OUT">
+    <variableSet href="../rules/InsuranceVariables.var#81b0c215-12a0-4bc1-94df-4ffa1f131204"/>
+  </referencedVariables>
+  <referencedVariables variableName="paymentBehaviour" variableSetName="InsuranceVariables">
+    <variableSet href="../rules/InsuranceVariables.var#81b0c215-12a0-4bc1-94df-4ffa1f131204"/>
+  </referencedVariables>
+  <referencedVariables variableName="insuranceProcess" variableSetName="InsuranceVariables">
+    <variableSet href="../rules/InsuranceVariables.var#81b0c215-12a0-4bc1-94df-4ffa1f131204"/>
+  </referencedVariables>
+  <referencedVariables variableName="managerApproval" variableSetName="InsuranceVariables" direction="OUT">
+    <variableSet href="../rules/InsuranceVariables.var#81b0c215-12a0-4bc1-94df-4ffa1f131204"/>
+  </referencedVariables>
+  <ruleflow href="../rules/InsuranceFlow.rfl#8356e4db-3571-4c00-a3b9-3814cfa62989"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="InsuranceOperation_extractor" validator="Test Validator"/>
+  <targetRuleProject href="../../InsuranceProject#bd7e1728-97f8-4398-915a-2fe81d5b5e4a"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

@@ -1,0 +1,45 @@
+use damage;
+use policy$_$claim;
+
+flowtask InsuranceFlow {
+  property mainflowtask = false;
+  property ilog.rules.business_name = "InsuranceFlow";
+  property ilog.rules.package_name = "";
+  finalaction {
+    managerApproval = "mandatory";?context.updateContext();
+  };
+  body {
+    InsuranceFlow#MainRule;
+    if (damage.indexOf("true") != -1) {
+      InsuranceFlow#AmountClaimTable;
+      if (policy_claim.doubleValue() > 50000) {
+      }
+    }
+  }
+};
+
+ruletask InsuranceFlow#MainRule {
+  property ilog.rules.business_name = "InsuranceFlow>MainRule";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  property ilog.rules.engine.sequential.fastpath = true;
+  ordering = sorted;
+  body {
+    MainRule
+  }
+};
+
+ruletask InsuranceFlow#AmountClaimTable {
+  property ilog.rules.business_name = "InsuranceFlow>AmountClaimTable";
+  property ilog.rules.package_name = "";
+  algorithm = sequential;
+  property ilog.rules.engine.sequential.fastpath = true;
+  ordering = sorted;
+  finalaction {
+    policy_claim=paymentDelay();
+  };
+  body {
+    group("AmountClaimTable")
+  }
+};
+

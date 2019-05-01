@@ -1,0 +1,223 @@
+// begin DT AmountClaimTable
+// -- begin rule 'AmountClaimTable 0'
+rule AmountClaimTable_0 {
+   property ilog.rules.business_name = "AmountClaimTable 1";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate ((("Vehicle" in insuranceProcess.type) && (status.indexOf("High") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 250000 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 0'
+// -- begin rule 'AmountClaimTable 1'
+rule AmountClaimTable_1 {
+   property ilog.rules.business_name = "AmountClaimTable 2";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate ((("Vehicle" in insuranceProcess.type) && (status.indexOf("Medium") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 100000 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 1'
+// -- begin rule 'AmountClaimTable 2'
+rule AmountClaimTable_2 {
+   property ilog.rules.business_name = "AmountClaimTable 3";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate ((("Vehicle" in insuranceProcess.type) && (status.indexOf("Low") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 10000 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 2'
+// -- begin rule 'AmountClaimTable 3'
+rule AmountClaimTable_3 {
+   property ilog.rules.business_name = "AmountClaimTable 4";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate ((("Health" in insuranceProcess.type) && (status.indexOf("High") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 500000 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 3'
+// -- begin rule 'AmountClaimTable 4'
+rule AmountClaimTable_4 {
+   property ilog.rules.business_name = "AmountClaimTable 5";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate ((("Health" in insuranceProcess.type) && (status.indexOf("Medium") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 250000 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 4'
+// -- begin rule 'AmountClaimTable 5'
+rule AmountClaimTable_5 {
+   property ilog.rules.business_name = "AmountClaimTable 6";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate ((("Health" in insuranceProcess.type) && (status.indexOf("Low") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 25000 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 5'
+// -- begin rule 'AmountClaimTable 6'
+rule AmountClaimTable_6 {
+   property ilog.rules.business_name = "AmountClaimTable 7";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate ((("Life" in insuranceProcess.type) && (status.indexOf("High") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 1000000 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 6'
+// -- begin rule 'AmountClaimTable 7'
+rule AmountClaimTable_7 {
+   property ilog.rules.business_name = "AmountClaimTable 8";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate ((("Life" in insuranceProcess.type) && (status.indexOf("Medium") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 500000 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 7'
+// -- begin rule 'AmountClaimTable 8'
+rule AmountClaimTable_8 {
+   property ilog.rules.business_name = "AmountClaimTable 9";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate ((("Life" in insuranceProcess.type) && (status.indexOf("Low") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 200000 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 8'
+// -- begin rule 'AmountClaimTable 9'
+rule AmountClaimTable_9 {
+   property ilog.rules.business_name = "AmountClaimTable 10";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate ((("House" in insuranceProcess.type) && (status.indexOf("High") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 2500000 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 9'
+// -- begin rule 'AmountClaimTable 10'
+rule AmountClaimTable_10 {
+   property ilog.rules.business_name = "AmountClaimTable 11";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate ((("House" in insuranceProcess.type) && (status.indexOf("Medium") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 1000000 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 10'
+// -- begin rule 'AmountClaimTable 11'
+rule AmountClaimTable_11 {
+   property ilog.rules.business_name = "AmountClaimTable 12";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate ((("House" in insuranceProcess.type) && (status.indexOf("Low") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 500000 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 11'
+// -- begin rule 'AmountClaimTable 12'
+rule AmountClaimTable_12 {
+   property ilog.rules.business_name = "AmountClaimTable 13";
+   property ilog.rules.dt = "AmountClaimTable";
+   property ilog.rules.group = "AmountClaimTable";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate (((!((("Vehicle" in insuranceProcess.type) || ("Health" in insuranceProcess.type) || ("Life" in insuranceProcess.type) || ("House" in insuranceProcess.type)))) && (status.indexOf("Otherwise ") != -1)));
+   } then {
+      policy_claim = java.lang.Double.valueOf((double) 10 );
+      ?context.updateContext();
+   }
+}
+
+// -- end rule 'AmountClaimTable 12'
+// end DT AmountClaimTable

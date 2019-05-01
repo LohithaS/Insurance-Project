@@ -1,0 +1,24 @@
+use status;
+use paymentBehaviour;
+use policy_claim;
+
+function java.lang.Double paymentDelay() {
+if(paymentBehaviour.equalsIgnoreCase("good"))
+{
+	
+		policy_claim=policy_claim-0;
+	
+}
+if(paymentBehaviour.equalsIgnoreCase("worst"))
+{
+	if(status.equalsIgnoreCase("high"))
+	{
+		policy_claim=85*(policy_claim/100);
+	}else if(status.equalsIgnoreCase("medium"))
+	{
+		policy_claim=75*(policy_claim/100);
+	}else
+	policy_claim=68*(policy_claim/100);
+}
+return policy_claim;
+}

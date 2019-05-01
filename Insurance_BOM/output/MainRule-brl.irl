@@ -1,0 +1,19 @@
+rule MainRule {
+   property ilog.rules.business_name = "MainRule";
+   property ilog.rules.package_name = "";
+   property status = "new";
+   when {
+      com.Insurance.InsuranceProcess() from insuranceProcess;
+      evaluate (statusOfPolicy : (insuranceProcess.checkEligibility()));
+      evaluate (statusOfPolicy.indexOf("Sorry Not Applicable") == -1);
+   } then {
+      status = statusOfPolicy;
+      damage = "true";
+      ?context.updateContext();
+   } else {
+      status = statusOfPolicy;
+      damage = "false";
+      ?context.updateContext();
+   }
+}
+

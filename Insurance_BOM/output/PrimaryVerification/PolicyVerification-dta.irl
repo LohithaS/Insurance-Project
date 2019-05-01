@@ -1,0 +1,241 @@
+// begin DT PolicyVerification
+// -- begin rule 'PolicyVerification 0'
+package PrimaryVerification {
+   use investigation;
+   use damage;
+   use recheck;
+   use policy_claim;
+   rule PolicyVerification_0 {
+      property ilog.rules.business_name = "PolicyVerification 1";
+      property ilog.rules.dt = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.group = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.package_name = "PrimaryVerification";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+         evaluate (((investigation.indexOf("vehicle") != -1) && (damage.indexOf("high") != -1)));
+      } then {
+         recheck = "Applicable";
+         policy_claim = java.lang.Double.valueOf((double) 100000 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'PolicyVerification 0'
+// -- begin rule 'PolicyVerification 1'
+package PrimaryVerification {
+   use investigation;
+   use damage;
+   use recheck;
+   use policy_claim;
+   rule PolicyVerification_1 {
+      property ilog.rules.business_name = "PolicyVerification 2";
+      property ilog.rules.dt = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.group = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.package_name = "PrimaryVerification";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+         evaluate (((investigation.indexOf("vehicle") != -1) && (damage.indexOf("moderate") != -1)));
+      } then {
+         recheck = "Applicable";
+         policy_claim = java.lang.Double.valueOf((double) 60000 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'PolicyVerification 1'
+// -- begin rule 'PolicyVerification 2'
+package PrimaryVerification {
+   use investigation;
+   use damage;
+   use recheck;
+   use policy_claim;
+   rule PolicyVerification_2 {
+      property ilog.rules.business_name = "PolicyVerification 3";
+      property ilog.rules.dt = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.group = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.package_name = "PrimaryVerification";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+         evaluate (((investigation.indexOf("vehicle") != -1) && (damage.indexOf("low") != -1)));
+      } then {
+         recheck = "Applicable";
+         policy_claim = java.lang.Double.valueOf((double) 25000 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'PolicyVerification 2'
+// -- begin rule 'PolicyVerification 3'
+package PrimaryVerification {
+   use investigation;
+   use damage;
+   use recheck;
+   use policy_claim;
+   rule PolicyVerification_3 {
+      property ilog.rules.business_name = "PolicyVerification 4";
+      property ilog.rules.dt = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.group = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.package_name = "PrimaryVerification";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+         evaluate (((investigation.indexOf("health") != -1) && (damage.indexOf("high") != -1)));
+      } then {
+         recheck = "Applicable";
+         policy_claim = java.lang.Double.valueOf((double) 200000 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'PolicyVerification 3'
+// -- begin rule 'PolicyVerification 4'
+package PrimaryVerification {
+   use investigation;
+   use damage;
+   use recheck;
+   use policy_claim;
+   rule PolicyVerification_4 {
+      property ilog.rules.business_name = "PolicyVerification 5";
+      property ilog.rules.dt = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.group = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.package_name = "PrimaryVerification";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+         evaluate (((investigation.indexOf("health") != -1) && (damage.indexOf("moderate") != -1)));
+      } then {
+         recheck = "Applicable";
+         policy_claim = java.lang.Double.valueOf((double) 100000 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'PolicyVerification 4'
+// -- begin rule 'PolicyVerification 5'
+package PrimaryVerification {
+   use investigation;
+   use damage;
+   use recheck;
+   use policy_claim;
+   rule PolicyVerification_5 {
+      property ilog.rules.business_name = "PolicyVerification 6";
+      property ilog.rules.dt = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.group = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.package_name = "PrimaryVerification";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+         evaluate (((investigation.indexOf("health") != -1) && (damage.indexOf("low") != -1)));
+      } then {
+         recheck = "Applicable";
+         policy_claim = java.lang.Double.valueOf((double) 50000 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'PolicyVerification 5'
+// -- begin rule 'PolicyVerification 6'
+package PrimaryVerification {
+   use investigation;
+   use damage;
+   use recheck;
+   use policy_claim;
+   rule PolicyVerification_6 {
+      property ilog.rules.business_name = "PolicyVerification 7";
+      property ilog.rules.dt = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.group = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.package_name = "PrimaryVerification";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+         evaluate (((investigation.indexOf("life") != -1) && (damage.indexOf("old") != -1)));
+      } then {
+         recheck = " Not Applicable";
+         policy_claim = java.lang.Double.valueOf((double) 0 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'PolicyVerification 6'
+// -- begin rule 'PolicyVerification 7'
+package PrimaryVerification {
+   use investigation;
+   use damage;
+   use recheck;
+   use policy_claim;
+   rule PolicyVerification_7 {
+      property ilog.rules.business_name = "PolicyVerification 8";
+      property ilog.rules.dt = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.group = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.package_name = "PrimaryVerification";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+         evaluate (((investigation.indexOf("life") != -1) && (damage.indexOf("adult") != -1)));
+      } then {
+         recheck = "Applicable";
+         policy_claim = java.lang.Double.valueOf((double) 900000 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'PolicyVerification 7'
+// -- begin rule 'PolicyVerification 8'
+package PrimaryVerification {
+   use investigation;
+   use damage;
+   use recheck;
+   use policy_claim;
+   rule PolicyVerification_8 {
+      property ilog.rules.business_name = "PolicyVerification 9";
+      property ilog.rules.dt = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.group = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.package_name = "PrimaryVerification";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+         evaluate (((investigation.indexOf("life") != -1) && (damage.indexOf("children") != -1)));
+      } then {
+         recheck = "Applicable";
+         policy_claim = java.lang.Double.valueOf((double) 5000000 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'PolicyVerification 8'
+// -- begin rule 'PolicyVerification 9'
+package PrimaryVerification {
+   use investigation;
+   use recheck;
+   use policy_claim;
+   rule PolicyVerification_9 {
+      property ilog.rules.business_name = "PolicyVerification 10";
+      property ilog.rules.dt = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.group = "PrimaryVerification.PolicyVerification";
+      property ilog.rules.package_name = "PrimaryVerification";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+         evaluate (((!(((investigation.indexOf("vehicle") != -1) || (investigation.indexOf("health") != -1) || (investigation.indexOf("life") != -1))))));
+      } then {
+         recheck = "sorry";
+         policy_claim = java.lang.Double.valueOf((double) 0 );
+         ?context.updateContext();
+      }
+   }
+}
+
+// -- end rule 'PolicyVerification 9'
+// end DT PolicyVerification

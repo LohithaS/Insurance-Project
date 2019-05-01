@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>InsuranceVariables</name>
+  <uuid>81b0c215-12a0-4bc1-94df-4ffa1f131204</uuid>
+  <variables name="insurance" type="com.Insurance.Insurance" initialValue="" verbalization="insurance"/>
+  <variables name="agentContact" type="java.lang.String" initialValue="" verbalization="contact with agent"/>
+  <variables name="investigation" type="java.lang.String" initialValue="" verbalization="type of insurance"/>
+  <variables name="recheck" type="java.lang.String" initialValue="" verbalization="policy re-checking"/>
+  <variables name="damage" type="java.lang.String" initialValue="" verbalization="evaluation of damage"/>
+  <variables name="status" type="java.lang.String" initialValue="" verbalization="status"/>
+  <variables name="insuranceProcess" type="com.Insurance.InsuranceProcess" initialValue="" verbalization="Insurance Process"/>
+  <variables name="policy_claim" type="java.lang.Double" initialValue="" verbalization="policy_claim"/>
+  <variables name="paymentBehaviour" type="java.lang.String" initialValue="" verbalization="paymentBehaviour"/>
+  <variables name="managerApproval" type="java.lang.String" initialValue="" verbalization="managerApproval"/>
+</ilog.rules.studio.model.base:VariableSet>
